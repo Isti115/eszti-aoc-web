@@ -1,6 +1,7 @@
 import Header from './Header'
 import Content from './Content'
 import Calendar from './Calendar'
+// import days from './days/index'
 
 export default class App {
   /**

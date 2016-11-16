@@ -3,7 +3,9 @@
   "version": "0.0.1",
   "description": "Advent-of-code for Eszti.",
   "scripts": {
-    "bundle": "rollup --config --sourcemap inline"
+    "bundle": "rollup --config --sourcemap inline",
+    "mon": "nodemon --watch src --exec npm run bundle",
+    "test": "standard"
   },
   "author": "Isti115",
   "license": "ISC",
