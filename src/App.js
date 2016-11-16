@@ -1,6 +1,5 @@
 import Header from './Header'
 import Content from './Content'
-import Calendar from './Calendar'
 // import days from './days/index'
 
 export default class App {
@@ -11,9 +10,6 @@ export default class App {
     this.container = container
 
     this.header = new Header()
-    this.calendar = new Calendar()
-
-    this.header.container.appendChild(this.calendar.container)
 
     this.content = new Content()
 
