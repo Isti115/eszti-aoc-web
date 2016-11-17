@@ -1,0 +1,16 @@
+#content {
+  position: fixed;
+    top: 320px;
+    right: 10px;
+    bottom: 10px;
+    left: 10px;
+
+  padding: 15px;
+
+  background-color: rgb(250, 100, 100);
+}
+
+.CodeMirror {
+  width: 500px;
+  height: 200px;
+}

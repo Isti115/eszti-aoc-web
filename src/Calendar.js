@@ -9,7 +9,9 @@ class CalendarDay extends CustomElement {
     super('div')
     this.container.classList.add('calendar-day')
 
-    this.container.appendChild(document.createTextNode(day.number))
+    this.numberDiv = document.createElement('div')
+    this.numberDiv.appendChild(document.createTextNode(day.number))
+    this.container.appendChild(this.numberDiv)
   }
 }
 
@@ -34,7 +36,7 @@ export default class Content extends CustomElement {
     }
 
     for (let i = 0; i < 1; i++) {
-      this.container.appendChild(fillingDiv.cloneNode())
+      this.container.appendChild(fillingDiv.cloneNode(true))
     }
   }
 }
