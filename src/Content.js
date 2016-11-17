@@ -8,14 +8,18 @@ export default class Content extends CustomElement {
     super('div')
     this.container.id = 'content'
 
-    this.container.appendChild(document.createTextNode('content'))
+    this.descriptionDiv = document.createElement('div')
+    this.container.appendChild(this.descriptionDiv)
 
     this.codeMirror = CodeMirror(this.container, {
-      value: 'function myScript(){return 100;}\n',
-      mode: 'javascript'
+      mode: 'javascript',
+      theme: 'esztiaoc',
+      tabSize: 2
     })
 
-    setTimeout(() => { this.codeMirror.refresh() })
+    window.codeMirror = this.codeMirror
+
+    setTimeout(() => this.codeMirror.refresh())
 
     dayStringStore.subscribe(this.updateDay.bind(this))
   }

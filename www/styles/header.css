@@ -11,12 +11,13 @@
 
   padding: 15px;
 
-  background-color: rgb(35, 150, 35);
+  background-color: rgba(35, 150, 35, 1);
   border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
 }
 
 #header h1 {
-  margin-left: 30px; 
+  margin-left: 30px;
   font-size: 50px;
 }
 
@@ -49,7 +50,7 @@
     rgba(0, 0, 0, 1) 5px,
     rgba(0, 0, 0, 0) 5px,
     rgba(0, 0, 0, 0) 10px
-  ); 
+  );
 }
 
 .calendar-day.today {
@@ -69,10 +70,11 @@
 
   cursor: pointer;
 
-  box-shadow: inset 0px 0px 10px 10px rgba(25, 175, 25, 1); 
+  box-shadow: inset 0px 0px 10px 10px rgba(25, 175, 25, 1);
+  /*box-shadow: inset 0px 0px 10px 10px rgba(185, 202, 74, 1);*/
   transition: all 1s;
 }
 
 .calendar-day.active div {
-  box-shadow: inset 0px 0px 10px 10px rgba(175, 25, 25, 1); 
+  box-shadow: inset 0px 0px 10px 10px rgba(175, 25, 25, 1);
 }

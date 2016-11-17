@@ -1,5 +1,5 @@
 body {
+  font-family: "Consolas";
   color: white;
-
-  font-family: "Consolas"
+  background-color: rgba(0, 75, 0, 1);
 }
