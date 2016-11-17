@@ -9,14 +9,23 @@ class CalendarDay extends CustomElement {
     super('div')
     this.container.classList.add('calendar-day')
 
+    this.day = day
+
     this.numberDiv = document.createElement('div')
     this.numberDiv.appendChild(document.createTextNode(day.number))
+
+    this.numberDiv.addEventListener('click', () => this.handleClick(), false)
+
     this.container.appendChild(this.numberDiv)
+  }
+
+  handleClick () {
+    console.log(this.day.toString())
   }
 }
 
-export default class Content extends CustomElement {
-  constructor () {
+export default class Calendar extends CustomElement {
+  constructor (changeDay) {
     super('div')
     this.container.id = 'calendar'
 
@@ -30,13 +39,29 @@ export default class Content extends CustomElement {
       this.container.appendChild(fillingDiv.cloneNode())
     }
 
+    /** @type {CalendarDay[]} */
+    this.calendarDays = []
+
     for (let i = startDayNumber; i <= endDayNumber; i++) {
-      const day = new CalendarDay(DayUtility.dayFromNumber(i, true))
-      this.container.appendChild(day.container)
+      const calendarDay = new CalendarDay(DayUtility.dayFromNumber(i, true))
+      this.calendarDays.push(calendarDay)
+      this.container.appendChild(calendarDay.container)
     }
 
     for (let i = 0; i < 1; i++) {
       this.container.appendChild(fillingDiv.cloneNode(true))
+    }
+  }
+
+  updateDay (newDay, dayData) {
+    console.log('calendar updated')
+
+    for (const calendarDay of this.calendarDays) {
+      if (calendarDay.day.toString() === newDay.toString()) {
+        calendarDay.numberDiv.classList.add('active')
+      } else {
+        calendarDay.numberDiv.classList.remove('active')
+      }
     }
   }
 }

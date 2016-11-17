@@ -16,4 +16,8 @@ export default class Content extends CustomElement {
 
     setTimeout(() => { this.codeMirror.refresh() })
   }
+
+  updateDay (newDay, dayData) {
+    console.log('content updated')
+  }
 }

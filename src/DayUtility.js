@@ -11,6 +11,10 @@ export class Day {
     this.month = month
     this.number = number
   }
+
+  toString () {
+    return this.month.abbreviation + this.number
+  }
 }
 
 export function getMonths (isLeapYear = false) {
@@ -70,3 +74,6 @@ export function dayFromNumber (number, isLeapYear = false) {
   return new Day(months[monthIndex], number)
 }
 
+export function dayFromString (string, isLeapYear = false) {
+  return dayFromNumber(dayNumberFromString(string, isLeapYear), isLeapYear)
+}
