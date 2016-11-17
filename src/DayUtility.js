@@ -77,3 +77,11 @@ export function dayFromNumber (number, isLeapYear = false) {
 export function dayFromString (string, isLeapYear = false) {
   return dayFromNumber(dayNumberFromString(string, isLeapYear), isLeapYear)
 }
+
+export function todayDayNumber () {
+  return Math.ceil((Date.now() - (new Date(2016, 0, 1))) / (24 * 60 * 60 * 1000))
+}
+
+export function todayDay (isLeapYear = false) {
+  return dayFromNumber(todayDayNumber(), isLeapYear)
+}

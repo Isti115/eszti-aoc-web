@@ -1,6 +1,7 @@
 /* global CodeMirror */
 
 import CustomElement from './CustomElement'
+import dayStringStore from './dayStringStore'
 
 export default class Content extends CustomElement {
   constructor () {
@@ -15,9 +16,12 @@ export default class Content extends CustomElement {
     })
 
     setTimeout(() => { this.codeMirror.refresh() })
+
+    dayStringStore.subscribe(this.updateDay.bind(this))
   }
 
-  updateDay (newDay, dayData) {
-    console.log('content updated')
+  updateDay (dayString, dayData) {
+    console.log('content updated' + dayString)
+    this.codeMirror.setValue(dayData.content)
   }
 }

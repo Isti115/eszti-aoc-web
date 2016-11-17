@@ -1,3 +1,7 @@
 export default {
-  title: 'sajt'
+  title: 'Születésnap',
+  content: `function sziaEszti(params) {
+  
+}`,
+  examples: []
 }

@@ -1,5 +1,6 @@
 import CustomElement from './CustomElement'
 import Calendar from './Calendar'
+import dayStringStore from './dayStringStore'
 
 export default class Header extends CustomElement {
   constructor (changeDay) {
@@ -8,11 +9,15 @@ export default class Header extends CustomElement {
 
     this.calendar = new Calendar(changeDay)
     this.container.appendChild(this.calendar.container)
+
+    this.title = document.createElement('h1')
+    this.container.appendChild(this.title)
+
+    dayStringStore.subscribe(this.updateDay.bind(this))
   }
 
-  updateDay (newDay, dayData) {
-    console.log('header updated')
-
-    this.calendar.updateDay(newDay, dayData)
+  updateDay (dayString, dayData) {
+    console.log('header updated' + dayString)
+    this.title.textContent = dayData.title
   }
 }

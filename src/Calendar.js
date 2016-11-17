@@ -1,5 +1,6 @@
 import CustomElement from './CustomElement'
 import * as DayUtility from './DayUtility'
+import dayStringStore from './dayStringStore'
 
 class CalendarDay extends CustomElement {
   /**
@@ -20,7 +21,7 @@ class CalendarDay extends CustomElement {
   }
 
   handleClick () {
-    console.log(this.day.toString())
+    dayStringStore.setDayString(this.day.toString())
   }
 }
 
@@ -29,8 +30,11 @@ export default class Calendar extends CustomElement {
     super('div')
     this.container.id = 'calendar'
 
-    let startDayNumber = DayUtility.dayNumberFromString('nov26', true)
-    let endDayNumber = DayUtility.dayNumberFromString('dec24', true)
+    // let startDayNumber = DayUtility.dayNumberFromString('nov26', true)
+    // let endDayNumber = DayUtility.dayNumberFromString('dec24', true)
+
+    let startDayNumber = DayUtility.dayNumberFromString('nov16', true)
+    let endDayNumber = DayUtility.dayNumberFromString('dec14', true)
 
     const fillingDiv = document.createElement('div')
     fillingDiv.classList.add('calendar-day', 'filling')
@@ -44,6 +48,13 @@ export default class Calendar extends CustomElement {
 
     for (let i = startDayNumber; i <= endDayNumber; i++) {
       const calendarDay = new CalendarDay(DayUtility.dayFromNumber(i, true))
+
+      console.log(i, DayUtility.todayDayNumber(), calendarDay.day)
+
+      if (i === DayUtility.todayDayNumber(true)) {
+        calendarDay.container.classList.add('today')
+      }
+
       this.calendarDays.push(calendarDay)
       this.container.appendChild(calendarDay.container)
     }
@@ -51,16 +62,18 @@ export default class Calendar extends CustomElement {
     for (let i = 0; i < 1; i++) {
       this.container.appendChild(fillingDiv.cloneNode(true))
     }
+
+    dayStringStore.subscribe((dayString) => this.updateDay(dayString))
   }
 
-  updateDay (newDay, dayData) {
+  updateDay (dayString) {
     console.log('calendar updated')
 
     for (const calendarDay of this.calendarDays) {
-      if (calendarDay.day.toString() === newDay.toString()) {
-        calendarDay.numberDiv.classList.add('active')
+      if (calendarDay.day.toString() === dayString) {
+        calendarDay.container.classList.add('active')
       } else {
-        calendarDay.numberDiv.classList.remove('active')
+        calendarDay.container.classList.remove('active')
       }
     }
   }
