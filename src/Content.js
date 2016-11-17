@@ -25,7 +25,6 @@ export default class Content extends CustomElement {
   }
 
   updateDay (dayString, dayData) {
-    console.log('content updated' + dayString)
     this.codeMirror.setValue(dayData.content)
   }
 }

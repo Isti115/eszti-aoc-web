@@ -1,6 +1,6 @@
-.cm-s-esztiaoc { color: #666; background: rgba(75, 30, 30, 1); }
+.cm-s-esztiaoc { color: rgb(247, 245, 232);; background: rgb(127, 6, 9); }
 
-.cm-s-esztiaoc span.cm-keyword { color: rgba(35, 150, 35, 1); font-weight:bold; }  /* off-white 1 */
+.cm-s-esztiaoc span.cm-keyword { color: rgb(25, 175, 25); font-weight:bold; }  /* off-white 1 */
 .cm-s-esztiaoc span.cm-atom { color: #e1c76e; }                    /* yellow */
 .cm-s-esztiaoc span.cm-number { color: #6cb5d9; }                  /* blue */
 .cm-s-esztiaoc span.cm-def { color: #b9ca4a; }                     /* green */

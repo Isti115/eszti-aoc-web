@@ -1,4 +1,6 @@
 palette {
+  color: rgb(238, 223, 204);
+
   color: rgb(247, 245, 232);
   color: rgb(177, 172, 160);
   color: rgb(156, 211, 201);
@@ -13,4 +15,21 @@ palette {
   color: rgb(182, 96, 87);
   color: rgb(175, 36, 52);
   color: rgb(123, 42, 31);
+}
+
+palette2 {
+  color: rgb(180, 19, 26);
+  color: rgb(127, 6, 9);
+
+  color: rgb(189, 163, 88);
+  color: rgb(176, 139, 32);
+
+  color: rgb(43, 73, 22);
+  color: rgb(71, 127, 29);
+
+  color: rgb(122, 76, 24);  
+}
+
+palette3 {
+  color: rgb(25, 175, 25);
 }

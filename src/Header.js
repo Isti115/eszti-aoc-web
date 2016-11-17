@@ -17,7 +17,6 @@ export default class Header extends CustomElement {
   }
 
   updateDay (dayString, dayData) {
-    console.log('header updated' + dayString)
     this.title.textContent = dayData.title
   }
 }

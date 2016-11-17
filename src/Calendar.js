@@ -67,8 +67,6 @@ export default class Calendar extends CustomElement {
   }
 
   updateDay (dayString) {
-    console.log('calendar updated')
-
     for (const calendarDay of this.calendarDays) {
       if (calendarDay.day.toString() === dayString) {
         calendarDay.container.classList.add('active')
