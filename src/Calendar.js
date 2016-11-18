@@ -49,8 +49,6 @@ export default class Calendar extends CustomElement {
     for (let i = startDayNumber; i <= endDayNumber; i++) {
       const calendarDay = new CalendarDay(DayUtility.dayFromNumber(i, true))
 
-      console.log(i, DayUtility.todayDayNumber(), calendarDay.day)
-
       if (i === DayUtility.todayDayNumber(true)) {
         calendarDay.container.classList.add('today')
       }

@@ -1,7 +1,8 @@
 export default {
   title: 'Másnap',
-  content: `function helloworld(params) {
+  description:
+`Valami`,
+  initialCode: `function helloworld(params) {
   
-}`,
-  examples: []
+}`
 }

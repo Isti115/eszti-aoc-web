@@ -24,8 +24,6 @@ class DayStringStore {
 
     window.location.hash = dayString
 
-    console.log(days[dayString])
-
     for (const callback of this.subscriptions) {
       callback(dayString, days[dayString])
     }

@@ -1,7 +1,10 @@
 export default {
   title: 'Születésnap',
-  content: `function sziaEszti(params) {
+  description:
+`#sajt
+valami  
+asdf`,
+  initialCode: `function sziaEszti(params) {
   
-}`,
-  examples: []
+}`
 }
