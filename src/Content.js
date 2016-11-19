@@ -12,6 +12,7 @@ export default class Content extends CustomElement {
     this.showdownConverter = new showdown.Converter()
 
     this.descriptionDiv = document.createElement('div')
+    this.descriptionDiv.id = 'description'
     this.container.appendChild(this.descriptionDiv)
 
     this.codeEditor = new CodeEditor()

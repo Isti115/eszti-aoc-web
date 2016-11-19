@@ -5,7 +5,9 @@
     bottom: 10px;
     left: 10px;
 
-  padding: 0px 15px;
+  padding: 0px 15px 15px 15px;
+
+  overflow: auto;
 
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
@@ -13,9 +15,93 @@
   background-color: rgb(180, 19, 26);
 }
 
-.CodeMirror {
-  width: 500px;
-  height: 200px;
+#description pre {
+  margin-left: 30px;
+}
+
+#description pre code {
+  padding: 7px;
 
   border-radius: 10px;
+  
+  background-color: rgb(127, 6, 9);
+}
+
+#codeEditor {
+  height: 300px;
+}
+
+#codeEditor > * {
+  display: inline-block;
+
+  height: 100%;
+
+  margin-right: 10px;
+
+  vertical-align: top;
+}
+
+#codeEditor h2 {
+  margin: 5px;
+}
+
+#inputTextarea {
+  height: 248px; 
+
+  padding: 7px;
+
+  border-radius: 10px;
+  
+  color: rgb(247, 245, 232);
+  background-color: rgb(127, 6, 9);
+
+  resize: horizontal;
+}
+
+.CodeMirror {
+  width: 500px;
+
+  border-radius: 10px;
+}
+
+#evaluateButton {
+  white-space: pre;
+
+  border-radius: 10px;
+  
+  cursor: pointer;
+
+  color: rgb(247, 245, 232);
+  background-color: rgb(176, 139, 32);;
+}
+
+#evaluateButton span {
+  display: block;
+  font-size: 35px;
+}
+
+#outputDiv {
+  white-space: pre;
+}
+
+#outputDiv > div {
+  display: inline-block;
+
+  margin-left: 10px;
+
+  vertical-align: top;
+
+  white-space: pre;
+}
+
+#outputDiv > div > div {
+  height: 248px; 
+
+  padding: 7px;
+
+  overflow: auto;
+
+  border-radius: 10px;
+  
+  background-color: rgb(127, 6, 9);
 }

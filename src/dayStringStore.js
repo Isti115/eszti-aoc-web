@@ -19,6 +19,10 @@ class DayStringStore {
     return this.dayString
   }
 
+  getDayData () {
+    return days[this.dayString]
+  }
+
   setDayString (dayString) {
     this.dayString = dayString
 
