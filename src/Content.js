@@ -15,6 +15,8 @@ export default class Content extends CustomElement {
     this.descriptionDiv.id = 'description'
     this.container.appendChild(this.descriptionDiv)
 
+    this.container.appendChild(document.createElement('hr'))
+
     this.codeEditor = new CodeEditor()
     this.container.appendChild(this.codeEditor.container)
 

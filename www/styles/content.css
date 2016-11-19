@@ -19,12 +19,18 @@
   margin-left: 30px;
 }
 
-#description pre code {
-  padding: 7px;
+#description code {
+  padding: 2px 7px;
 
   border-radius: 10px;
-  
+
   background-color: rgb(127, 6, 9);
+}
+
+#description pre code {
+  display: inline-block;
+
+  padding: 7px;
 }
 
 #codeEditor {
@@ -46,12 +52,12 @@
 }
 
 #inputTextarea {
-  height: 248px; 
+  height: 248px;
 
   padding: 7px;
 
   border-radius: 10px;
-  
+
   color: rgb(247, 245, 232);
   background-color: rgb(127, 6, 9);
 
@@ -68,7 +74,7 @@
   white-space: pre;
 
   border-radius: 10px;
-  
+
   cursor: pointer;
 
   color: rgb(247, 245, 232);
@@ -95,13 +101,13 @@
 }
 
 #outputDiv > div > div {
-  height: 248px; 
+  height: 248px;
 
   padding: 7px;
 
   overflow: auto;
 
   border-radius: 10px;
-  
+
   background-color: rgb(127, 6, 9);
 }

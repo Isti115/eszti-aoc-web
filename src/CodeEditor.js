@@ -46,8 +46,8 @@ export default class codeEditor extends CustomElement {
   }
 
   updateDay (dayString, dayData) {
-    this.codeMirror.setValue(dayData.initialCode)
-    this.inputTextarea.value = dayData.initialInput
+    this.codeMirror.setValue(dayData.initialCode.trim())
+    this.inputTextarea.value = dayData.initialInput.trim()
   }
 
   evaluate () {
