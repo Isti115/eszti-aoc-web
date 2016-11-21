@@ -1,3 +1,4 @@
-@import "main.css";
+@import "./main.css";
+@import "./help.css";
 @import "./header.css";
 @import "./content.css";

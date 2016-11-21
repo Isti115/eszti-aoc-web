@@ -1,3 +1,4 @@
+import Help from './Help'
 import Header from './Header'
 import Content from './Content'
 import dayStringStore from './dayStringStore'
@@ -12,9 +13,11 @@ export default class App {
 
     this.container = container
 
-    this.header = new Header((dayString) => this.changeDay(dayString))
+    this.help = new Help()
+    this.header = new Header()
     this.content = new Content()
 
+    container.appendChild(this.help.container)
     container.appendChild(this.header.container)
     container.appendChild(this.content.container)
 

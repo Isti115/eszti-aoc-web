@@ -1,5 +1,5 @@
 export default {
-  title: 'Nov. 27. - JSON',
+  title: 'Nov. 27.\n - JSON',
   description:
 `
 #A JSON adatformátum

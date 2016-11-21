@@ -1,5 +1,5 @@
 export default {
-  title: 'Nov. 26. - JavaScript',
+  title: 'Nov. 26.\n - JavaScript',
   description:
 `
 ## Változók
@@ -17,9 +17,6 @@ function areaOfRectangle (width, height) {
   return area
 }
 \`\`\`
-Az ezen a felületen található kódszerkesztőbe egy olyan függvény törzsét kell megírnunk, melynek egy \`data\` nevű paramétere van, ami a bemeneti adatokat tartalmazza (jelenleg ezzel még nem kell foglalkozni).
-<br />
-A feladat ennek a függvénytörzsnek a megírása úgy, hogy a kitűzött problémát megoldva annak végeredményét adja visszatérési értékként.
 
 Jelen esetben egy 5 sugarú körnek szeretnénk kiszámítani a területét egy \`areaOfCircle\` nevű és \`r\` (a kör sugara) paraméterű függvény segítségével.
 
