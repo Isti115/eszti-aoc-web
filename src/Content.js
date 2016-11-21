@@ -9,7 +9,7 @@ export default class Content extends CustomElement {
     super('div')
     this.container.id = 'content'
 
-    this.showdownConverter = new showdown.Converter()
+    this.showdownConverter = new showdown.Converter({tables: true})
 
     this.descriptionDiv = document.createElement('div')
     this.descriptionDiv.id = 'description'

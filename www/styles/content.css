@@ -40,6 +40,16 @@
   border-left: solid rgb(127, 6, 9) 5px;
 }
 
+#description table {
+  border-collapse: collapse;
+}
+
+#description table > * > * > * {
+  padding: 3px;
+
+  border: solid rgb(127, 6, 9) 2px;
+}
+
 #codeEditor {
   height: 300px;
 }

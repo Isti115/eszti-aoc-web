@@ -23,14 +23,28 @@ Ezek a típusok komplex adatszerkezetek lértehozásának céljával tetszőlege
   {"name": "Isti", age: 19}
 ]
 \`\`\`
+
+Adjuk vissza a következő táblázatban található emberek objektumainak listáját (mindenki csak egyszer szerepeljen), ami név szerint ABC rendben növekvően rendezett.
+<br />
+Egy ember objektuma tartalmazza a nevét (\`name\`) és a hozzá tartozó termékek listáját. A termékek listája szintén legyen ABC rendben növekvő név szerint.
+<br />
+Egy termék objektuma tartalmazza a termék nevét (\`name\`) és a vásárolni kívánt mennyiséget (\`name\`).
+
+| Name    | Item      | Amount |
+| ------- | --------- | ------ |
+| Benedek | csavar    | 35     |
+| Benedek | propeller | 10     |
+| Mama    | kalács    | 3      |
+| Mama    | pite      | 2      |
+
 `,
   initialInput: `{}`,
   initialCode: `return []`,
   validSolution:
 `
 return [
-  {name: 'Benedek', list: [{name: 'csavar', amount: 35}, {name: 'propeller', amount: 10}]}
-  {name: 'Mama', list: [{name: 'kalács', amount: 3}, {name: 'pite', amount: 2}]},
+  {name: 'Benedek', list: [{name: 'csavar', amount: 35}, {name: 'propeller', amount: 10}]},
+  {name: 'Mama', list: [{name: 'kalács', amount: 3}, {name: 'pite', amount: 2}]}
 ]
 `,
   code: 2216
