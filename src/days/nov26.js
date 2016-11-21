@@ -10,7 +10,7 @@ A JavaScript két fontosabb változótípusa:
 
 ## Függvények
 
-A Függvényeket a \`function\` kulcsszóval definiáljuk a paramétereinek listázásával, a törzsében lévő műveletek felsorolásával és a visszatérési értékének megadásával a következőképpen:
+A függvényeket a \`function\` kulcsszóval definiáljuk a paramétereinek listázásával, a törzsében lévő műveletek felsorolásával és a visszatérési értékének megadásával a következőképpen:
 \`\`\`
 function areaOfRectangle (width, height) {
   const area = width * height
@@ -21,9 +21,9 @@ Az ezen a felületen található kódszerkesztőbe egy olyan függvény törzsé
 <br />
 A feladat ennek a függvénytörzsnek a megírása úgy, hogy a kitűzött problémát megoldva annak végeredményét adja visszatérési értékként.
 
-Jelen esetben egy 5 sugarú körnek szeretnénk kiszámítani a területét egy \`areaOfCircle\` függvény segítségével.
+Jelen esetben egy 5 sugarú körnek szeretnénk kiszámítani a területét egy \`areaOfCircle\` nevű és \`r\` (a kör sugara) paraméterű függvény segítségével.
 
-> Megjegyzés: A függvények tetszőlegesen egymásba ágyazhatóak.
+> Megjegyzés: A kommentelt (\`//\`-rel kezdődő) sor helyére ajánlott elkészíteni a szükséges kódot.
 <br />
 > Tipp: A hatványozás helyett szorozzuk meg önmagával a sugarat.
 `,
@@ -32,7 +32,7 @@ Jelen esetben egy 5 sugarú körnek szeretnénk kiszámítani a területét egy 
 `
 const pi = 3.14
 
-// insert areaOfCircle function definition here
+// ide írd az areaOfCircle függvény definícióját
 
 let r = 5
 

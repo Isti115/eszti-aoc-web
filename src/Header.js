@@ -13,6 +13,10 @@ export default class Header extends CustomElement {
     this.title = document.createElement('h1')
     this.container.appendChild(this.title)
 
+    this.decoration = document.createElement('div')
+    this.decoration.id = 'decoration'
+    this.container.appendChild(this.decoration)
+
     dayStringStore.subscribe(this.updateDay.bind(this))
   }
 

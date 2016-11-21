@@ -26,9 +26,9 @@ Ezek a típusok komplex adatszerkezetek lértehozásának céljával tetszőlege
 
 Adjuk vissza a következő táblázatban található emberek objektumainak listáját (mindenki csak egyszer szerepeljen), ami név szerint ABC rendben növekvően rendezett.
 <br />
-Egy ember objektuma tartalmazza a nevét (\`name\`) és a hozzá tartozó termékek listáját. A termékek listája szintén legyen ABC rendben növekvő név szerint.
+Egy ember objektuma tartalmazza a nevét (\`name\`) és a hozzá tartozó termékek listáját (\`list\`). A termékek listája szintén legyen ABC rendben növekvő név szerint.
 <br />
-Egy termék objektuma tartalmazza a termék nevét (\`name\`) és a vásárolni kívánt mennyiséget (\`name\`).
+Egy termék objektuma tartalmazza a termék nevét (\`name\`) és a vásárolni kívánt mennyiséget (\`amount\`).
 
 | Name    | Item      | Amount |
 | ------- | --------- | ------ |

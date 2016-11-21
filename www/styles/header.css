@@ -18,11 +18,6 @@
   user-select: none;
 }
 
-#header h1 {
-  margin-left: 30px;
-  font-size: 50px;
-}
-
 #calendar {
   display: flex;
   width: 350px;
@@ -79,4 +74,21 @@
 
 .calendar-day.active div {
   box-shadow: inset 0px 0px 10px 10px rgb(175, 36, 52);
+}
+
+#header h1 {
+  margin-left: 30px;
+  font-size: 50px;
+}
+
+#header #decoration {
+  width: 277px;
+  height: 270px;
+
+  margin-top: -34px;
+  margin-left: auto;
+
+  background: url(../images/spheres.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
