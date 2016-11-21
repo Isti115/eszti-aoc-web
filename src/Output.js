@@ -46,7 +46,8 @@ export default class Output extends CustomElement {
 
   setResult (result, success, code) {
     this.resultContent.textContent = JSON.stringify(result, null, '  ')
-    this.resultContent.textContent += '\nSuccess: ' + success + (success ? '\nYour code is: ' + code : '')
+    this.resultContent.textContent += '\n#==---==#\n'
+    this.resultContent.textContent += success ? 'Corret result!\nYour code is: ' + code : 'Wrong result.'
   }
 
   error (ex) {

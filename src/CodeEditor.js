@@ -55,8 +55,11 @@ export default class codeEditor extends CustomElement {
 
     try {
       const result = new Function('console', 'data', this.codeMirror.getValue())(this.output, JSON.parse(this.inputTextarea.value))
+
       const dayData = dayStringStore.getDayData()
-      this.output.setResult(result, _.isEqual(result, dayData.expectedOutput), dayData.code)
+      const expectedOutput = new Function('data', dayData.validSolution)(JSON.parse(dayData.initialInput))
+
+      this.output.setResult(result, _.isEqual(result, expectedOutput), dayData.code)
     } catch (ex) {
       this.output.error(ex)
     }

@@ -4,35 +4,51 @@ export default {
 `
 ## Változók
 
-* let
-* const 
+A JavaScript két fontosabb változótípusa:
+* **let**: Olyan változót hoz létre, amelynek a tárolt értékét később felül lehet írni. _pl.:_ \`let playerScore = 2500\`
+* **const**: Olyan változó, aminek az értéke már nem módosulhat. _pl.:_ \`const e = 2.71\`
 
 ## Függvények
 
-Gyakorlatilag a következő primitív (szám és szöveg) valamint összetett (tömb és objektum) adattípusokból állhat össze:
-
-* _Szám_: számjegyekkel leírt egész vagy tizedestört. _pl.:_ \`5\`, \`2.71\`
-
-* Szöveg: karakterek sorozata idézőjellel körülvéve. _pl.:_ \`"sajt"\`, \`"valami"\`
-
-* Tömb: tetszőleges számú és adattípusú (lehet vegyes is) tag vesszővel elválasztott formában felsorolva szögletes zárójellel körülvéve. _pl.:_ \`[1, 2, 3]\`, \`["pi", 3.14]\`
-
-* Objektum: tetszőleges számú kulcs-érték pár, ahol a kulcs minden esetben szöveg típusú, az érték pedig szabadon választható. _pl.:_ \`{"name": "isti", "age": 19}\`
-
-Ezek a típusok komplex adatszerkezetek lértehozásának céljával tetszőleges mélységgel egymásbaágyazhatóak. Például így:
+A Függvényeket a \`function\` kulcsszóval definiáljuk a paramétereinek listázásával, a törzsében lévő műveletek felsorolásával és a visszatérési értékének megadásával a következőképpen:
 \`\`\`
-[
-  {"name": "Eszti", age:20},
-  {"name": "Isti", age:19}
-]
+function areaOfRectangle (width, height) {
+  const area = width * height
+  return area
+}
 \`\`\`
+Az ezen a felületen található kódszerkesztőbe egy olyan függvény törzsét kell megírnunk, melynek egy \`data\` nevű paramétere van, ami a bemeneti adatokat tartalmazza (jelenleg ezzel még nem kell foglalkozni).
+<br />
+A feladat ennek a függvénytörzsnek a megírása úgy, hogy a kitűzött problémát megoldva annak végeredményét adja visszatérési értékként.
+
+Jelen esetben egy 5 sugarú körnek szeretnénk kiszámítani a területét egy \`areaOfCircle\` függvény segítségével.
+
+> Megjegyzés: A függvények tetszőlegesen egymásba ágyazhatóak.
+<br />
+> Tipp: A hatványozás helyett szorozzuk meg önmagával a sugarat.
 `,
   initialInput: `{}`,
   initialCode:
 `
-const pi = 3.141592;
-return 0
+const pi = 3.14
+
+// insert areaOfCircle function definition here
+
+let r = 5
+
+return areaOfCircle(r)
 `,
-  expectedOutput: {sajt: 10},
+  validSolution:
+`
+const pi = 3.14
+
+function areaOfCircle (r) {
+  return (r * r) * pi
+}
+
+let r = 5
+
+return areaOfCircle(r)
+`,
   code: 2532
 }

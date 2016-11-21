@@ -19,16 +19,19 @@ Gyakorlatilag a következő primitív (szám és szöveg) valamint összetett (t
 Ezek a típusok komplex adatszerkezetek lértehozásának céljával tetszőleges mélységgel egymásbaágyazhatóak. Például így:
 \`\`\`
 [
-  {"name": "Eszti", age:20},
-  {"name": "Isti", age:19}
+  {"name": "Eszti", age: 20},
+  {"name": "Isti", age: 19}
 ]
 \`\`\`
 `,
   initialInput: `{}`,
   initialCode: `return []`,
-  expectedOutput: [
-    {name: 'Mama', list: [{name: 'pite', amount: 2}, {name: 'kalács', amount: 3}]},
-    {name: 'Benedek', list: [{name: 'csavar', amount: 35}, {name: 'propeller', amount: 10}]}
-  ],
+  validSolution:
+`
+return [
+  {name: 'Benedek', list: [{name: 'csavar', amount: 35}, {name: 'propeller', amount: 10}]}
+  {name: 'Mama', list: [{name: 'kalács', amount: 3}, {name: 'pite', amount: 2}]},
+]
+`,
   code: 2216
 }

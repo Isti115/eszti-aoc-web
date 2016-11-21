@@ -33,6 +33,13 @@
   padding: 7px;
 }
 
+#description blockquote {
+  margin-left: 30px;
+  padding-left: 10px;
+
+  border-left: solid rgb(127, 6, 9) 5px;
+}
+
 #codeEditor {
   height: 300px;
 }
