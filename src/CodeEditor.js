@@ -12,7 +12,15 @@ export default class codeEditor extends CustomElement {
     this.input = document.createElement('div')
 
     this.inputHeader = document.createElement('h2')
-    this.inputHeader.textContent = 'Input:'
+
+    this.inputReset = document.createElement('span')
+    this.inputReset.id = 'inputReset'
+    this.inputReset.textContent = '↻'
+
+    this.inputHeader.appendChild(this.inputReset)
+    this.inputHeader.appendChild(document.createTextNode(' Input:'))
+    this.inputHeader.addEventListener('click', this.resetInput.bind(this))
+
     this.input.appendChild(this.inputHeader)
 
     this.inputTextarea = document.createElement('textarea')
@@ -48,6 +56,10 @@ export default class codeEditor extends CustomElement {
   updateDay (dayString, dayData) {
     this.codeMirror.setValue(dayData.initialCode.trim())
     this.inputTextarea.value = dayData.initialInput.trim()
+  }
+
+  resetInput () {
+    this.inputTextarea.value = dayStringStore.getDayData().initialInput
   }
 
   evaluate () {

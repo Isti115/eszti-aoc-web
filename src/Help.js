@@ -12,13 +12,15 @@ export default class Help extends CustomElement {
     this.markdownContent =
 `
 # Súgó
-Üdvözöllek az Advent of Code for Eszti oldalon! :)
+Üdvözöllek az Advent of Code Esztinek szánt verziójához készült oldalon! :)
 
 Bal felül a naptárból tudod kiválasztani, hogy melyik feladatot szeretnéd épp megoldani.
 Előre dolgozni nem szabad, viszont visszafelé nyudogtan lehet menni az időben, nem gond, ha nem pont azon a napont kerül megoldásra egy feladat, mint amihez a naptárban tartozik.
 
 A feladat leírása alatt öt dolog található. Sorrendben balról jobbra:
 * **Bemenő adatok mezője:** Ide kerül a példa bemenete, amire a megfelelő kódot lefuttatva megkapjuk a sikeres megoldásért járó kódot, azonban tesztelési célokból nyudogtan át lehet írni más adatokra.
+<br />
+A mező fejléce mellett található gomb segítségével visszaállíthatjuk az eredeti tartalmát.
 
 * **Végrehajtandó kód mezője:** Itt kell elkészíteni azoknak a függvényeknek és utasításoknak a kódját, amelyek feldolgozzák a bemenő adatot.
   <br />

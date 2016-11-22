@@ -68,6 +68,12 @@
   margin: 5px;
 }
 
+#inputReset {
+  cursor: pointer;
+
+  user-select: none;
+}
+
 #inputTextarea {
   height: 248px;
 
