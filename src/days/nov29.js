@@ -1,15 +1,17 @@
 export default {
-  title: 'Teszt',
+  title: 'Nov. 29.\n - NULL',
   description:
-`Valami`,
+`
+
+`,
+  initialInput: `{}`,
   initialCode:
-`function helloworld(params) {
-  
-}
+`
 
-console.log('sajt')
-console.log(4)
+`,
+  validSolution:
+`
 
-
-return [{a:3}, {b:5, c:[]}]`
+`,
+  code: 2480
 }

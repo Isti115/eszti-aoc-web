@@ -24,6 +24,12 @@ class DayStringStore {
   }
 
   setDayString (dayString) {
+    if (!(dayString in days)) {
+    // if (!(dayString in days) || DayUtility.todayDayNumber() < DayUtility.dayNumberFromString(dayString, true)) {
+      window.alert('This day is not available yet.')
+      return
+    }
+
     this.dayString = dayString
 
     window.location.hash = dayString
