@@ -6,29 +6,31 @@ export default {
 A JSON (JavaScript Object Notation) egy elterjedt és kényelmes módja adatok tárolásának.
 A JavaScript-ben előforduló objektumok nagyon könnyen konvertálhatóak oda-vissza, ezért ez a rendszer is ilyen formában fogja megadni a bemenő adatokat, és egy JavaScript objektumként fogja várni a kimenetet.
 
-Gyakorlatilag a következő primitív (szám és szöveg) valamint összetett (tömb és objektum) adattípusokból állhat össze:
+Gyakorlatilag a következő primitív (**logikai**, **szám** és **szöveg**) valamint összetett (**lista** és **objektum**) adattípusokból állhat össze:
 
-* _Szám_: számjegyekkel leírt egész vagy tizedestört. _pl.:_ \`5\`, \`2.71\`
+* **Logikai:** Igaz vagy hamis értéket reprezentál. _pl.:_ \`true\`, \`false\`
 
-* Szöveg: karakterek sorozata idézőjellel körülvéve. _pl.:_ \`"sajt"\`, \`"valami"\`
+* **Szám:** számjegyekkel leírt egész vagy tizedestört. _pl.:_ \`5\`, \`2.71\`
 
-* Tömb: tetszőleges számú és adattípusú (lehet vegyes is) tag vesszővel elválasztott formában felsorolva szögletes zárójellel körülvéve. _pl.:_ \`[1, 2, 3]\`, \`["pi", 3.14]\`
+* **Szöveg:** karakterek sorozata idézőjellel körülvéve. _pl.:_ \`"sajt"\`, \`"valami"\`
 
-* Objektum: tetszőleges számú kulcs-érték pár, ahol a kulcs minden esetben szöveg típusú, az érték pedig szabadon választható. _pl.:_ \`{"name": "isti", "age": 19}\`
+* **Lista:** tetszőleges számú és adattípusú (lehet vegyes is) tag vesszővel elválasztott formában felsorolva szögletes zárójellel körülvéve. _pl.:_ \`[1, 2, 3]\`, \`["pi", 3.14]\`
+
+* **Objektum:** tetszőleges számú kulcs-érték pár, ahol a kulcs minden esetben szöveg típusú, az érték pedig szabadon választható. _pl.:_ \`{"name": "isti", "age": 19}\`
 
 Ezek a típusok komplex adatszerkezetek lértehozásának céljával tetszőleges mélységgel egymásbaágyazhatóak. Például így:
 \`\`\`
 [
-  {"name": "Eszti", age: 20},
-  {"name": "Isti", age: 19}
+  {"name": "Eszti", "age": 20},
+  {"name": "Isti", "age": 19}
 ]
 \`\`\`
 
-Adjuk vissza a következő táblázatban található emberek objektumainak listáját (mindenki csak egyszer szerepeljen), ami név szerint ABC rendben növekvően rendezett.
+Adjuk vissza a következő táblázatban található emberek objektumainak listáját **lista**ként (mindenki csak egyszer szerepeljen), ami név szerint ABC rendben növekvően rendezett.
 <br />
-Egy ember objektuma tartalmazza a nevét (\`name\`) és a hozzá tartozó termékek listáját (\`list\`). A termékek listája szintén legyen ABC rendben növekvő név szerint.
+Egy ember objektuma tartalmazza a nevét (\`name\`) **szöveg**ként és a hozzá tartozó termékek listáját (\`list\`) **lista**ként. A termékek listája szintén legyen ABC rendben növekvő név szerint.
 <br />
-Egy termék objektuma tartalmazza a termék nevét (\`name\`) és a vásárolni kívánt mennyiséget (\`amount\`).
+Egy termék objektuma tartalmazza a termék nevét (\`name\`) **szöveg**ként és a vásárolni kívánt mennyiséget (\`amount\`) **szám**ként.
 
 | Name    | Item      | Amount |
 | ------- | --------- | ------ |
@@ -37,9 +39,17 @@ Egy termék objektuma tartalmazza a termék nevét (\`name\`) és a vásárolni 
 | Mama    | kalács    | 3      |
 | Mama    | pite      | 2      |
 
+> Megjegyzés: Ha jónak tűnik az eredmény, azonban a rendszer mégsem fogadja el, akkor ellenőrizd a kis- és nagybetűket valamint az értékek típusait! (A szám **szám** legyen, nem pedig **szöveg**.)
 `,
   initialInput: `{}`,
-  initialCode: `return []`,
+  initialCode:
+`
+console.log('Adatok előállítása folyamatban...')
+
+return [
+
+]
+`,
   validSolution:
 `
 return [

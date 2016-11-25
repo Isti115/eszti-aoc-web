@@ -5,8 +5,10 @@ export default {
 ## Változók
 
 A JavaScript két fontosabb változótípusa:
-* **let**: Olyan változót hoz létre, amelynek a tárolt értékét később felül lehet írni. _pl.:_ \`let playerScore = 2500\`
-* **const**: Olyan változó, aminek az értéke már nem módosulhat. _pl.:_ \`const e = 2.71\`
+* **let**: Olyan változót hoz létre, amely által mutatott értékét később felül lehet írni. _pl.:_ \`let playerScore = 2500\`
+* **const**: Olyan változó, aminek már nem módosulhat a mutatott értéke. _pl.:_ \`const e = 2.71\`
+<br />
+(_Ez összetett adattípusoknál (lista, objektum) nem jelenti azt, hogy a tárolt adatok sem módosulhatnak, mert például egy listához rendelt változónév nem a listaelemeket jelöli, hanem magát a listát, amihez adott esetben mondjuk még fűzhetünk hozzá utólag, vagy akár törölhetünk is belőle._)
 
 ## Függvények
 
