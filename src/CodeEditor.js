@@ -59,7 +59,7 @@ export default class codeEditor extends CustomElement {
   }
 
   resetInput () {
-    this.inputTextarea.value = dayStringStore.getDayData().initialInput
+    this.inputTextarea.value = dayStringStore.getDayData().initialInput.trim()
   }
 
   evaluate () {

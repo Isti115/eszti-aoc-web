@@ -12,11 +12,13 @@ Gyakorlatilag a következő primitív (**logikai**, **szám** és **szöveg**) v
 
 * **Szám:** számjegyekkel leírt egész vagy tizedestört. _pl.:_ \`5\`, \`2.71\`
 
-* **Szöveg:** karakterek sorozata idézőjellel körülvéve. _pl.:_ \`"sajt"\`, \`"valami"\`
+* **Szöveg:** karakterek sorozata idézőjellel (lehet aposztróf is) körülvéve. _pl.:_ \`"sajt"\`, \`'valami'\`
 
 * **Lista:** tetszőleges számú és adattípusú (lehet vegyes is) tag vesszővel elválasztott formában felsorolva szögletes zárójellel körülvéve. _pl.:_ \`[1, 2, 3]\`, \`["pi", 3.14]\`
 
 * **Objektum:** tetszőleges számú kulcs-érték pár, ahol a kulcs minden esetben szöveg típusú, az érték pedig szabadon választható. _pl.:_ \`{"name": "isti", "age": 19}\`
+<br />
+(_Vesszővel elválasztott formában felsorolva kapcsos zárójellel körülvéve._)
 
 Ezek a típusok komplex adatszerkezetek lértehozásának céljával tetszőleges mélységgel egymásbaágyazhatóak. Például így:
 \`\`\`

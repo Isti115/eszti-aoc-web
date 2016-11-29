@@ -49,7 +49,7 @@ export default class Output extends CustomElement {
   setResult (result, success, code) {
     this.resultContent.textContent = JSON.stringify(result, null, '  ')
     this.resultContent.textContent += '\n#==---==#\n'
-    this.resultContent.textContent += success ? 'Corret result!\nYour code is: ' + code : 'Wrong result.'
+    this.resultContent.textContent += success ? 'Correct result!\nYour code is: ' + code : 'Wrong result.'
 
     this.resultContent.scrollTop = this.resultContent.scrollHeight
   }

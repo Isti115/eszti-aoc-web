@@ -1,5 +1,5 @@
 import days from './days/index'
-// import * as DayUtility from './DayUtility'
+import * as DayUtility from './DayUtility'
 
 class DayStringStore {
   constructor () {
@@ -24,8 +24,13 @@ class DayStringStore {
   }
 
   setDayString (dayString) {
-    if (!(dayString in days)) {
-    // if (!(dayString in days) || DayUtility.todayDayNumber() < DayUtility.dayNumberFromString(dayString, true)) {
+    let strict = false
+
+    if (window.location.host.search(/.*waik.*/) != -1) {
+      strict = true
+    }
+
+    if (!(dayString in days) || (strict && DayUtility.todayDayNumber() < DayUtility.dayNumberFromString(dayString, true))) {
       window.alert('This day is not available yet.')
       return
     }

@@ -4,9 +4,9 @@ export default {
 `
 ## Változók
 
-A JavaScript két fontosabb változótípusa:
-* **let**: Olyan változót hoz létre, amely által mutatott értékét később felül lehet írni. _pl.:_ \`let playerScore = 2500\`
-* **const**: Olyan változó, aminek már nem módosulhat a mutatott értéke. _pl.:_ \`const e = 2.71\`
+A JavaScript két fontosabb változófajtája:
+* **let**: Olyan változót hoz létre, amelynek még később felülírhatjuk, hogy mire mutasson. _pl.:_ \`let playerScore = 2500\`
+* **const**: Olyan változó, aminél már nem módosulhat az, hogy mire mutat. _pl.:_ \`const e = 2.71\`
 <br />
 (_Ez összetett adattípusoknál (lista, objektum) nem jelenti azt, hogy a tárolt adatok sem módosulhatnak, mert például egy listához rendelt változónév nem a listaelemeket jelöli, hanem magát a listát, amihez adott esetben mondjuk még fűzhetünk hozzá utólag, vagy akár törölhetünk is belőle._)
 
@@ -35,7 +35,10 @@ const pi = 3.14
 
 let r = 5
 
-return areaOfCircle(r)
+const area = areaOfCircle(r)
+console.log('The area of a circle with radius ' + r + ' is: ' + area)
+
+return area
 `,
   validSolution:
 `
@@ -45,9 +48,14 @@ function areaOfCircle (r) {
   return (r * r) * pi
 }
 
+// const areaOfCircle = r => r*r*pi
+
 let r = 5
 
-return areaOfCircle(r)
+const area = areaOfCircle(r)
+console.log('The area of a circle with radius ' + r + ' is: ' + area)
+
+return area
 `,
   code: 2532
 }

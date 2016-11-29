@@ -33,8 +33,8 @@ export default class Calendar extends CustomElement {
     // let startDayNumber = DayUtility.dayNumberFromString('nov26', true)
     // let endDayNumber = DayUtility.dayNumberFromString('dec24', true)
 
-    let startDayNumber = DayUtility.dayNumberFromString('nov16', true)
-    let endDayNumber = DayUtility.dayNumberFromString('dec14', true)
+    let startDayNumber = DayUtility.dayNumberFromString('nov26', true)
+    let endDayNumber = DayUtility.dayNumberFromString('dec24', true)
 
     const fillingDiv = document.createElement('div')
     fillingDiv.classList.add('calendar-day', 'filling')

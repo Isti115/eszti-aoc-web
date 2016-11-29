@@ -33,7 +33,7 @@ A mező tulajdonképpen egy függvény törzsét tartalmazza, melynek egy \`data
 
 * **Kiértékelés gomb:** Végrehajtja a kódot a bemenő adatokra, és kitölti a **kimenő adatok** valamint az **eredmény** mezőt.
 
-* **Kimenő adatok mező:** A program (függvény) által \`console.log()\` utasítás segítségével futás közben kiírt üzeneteket tartalmazza.
+* **Kimenő adatok mező:** A program (függvény) által \`console.log()\` utasítás segítségével futás közben kiírt üzeneteket tartalmazza, vagy ha van, akkor az értelmezés vagy futás során adódó hibát.
 
 * **Eredmény mező:** A program (függvény) által \`return\` utasítás segítségével visszaadott érték, valamint annak helyessége, és helyes megoldás esetén a nap kódja.
 

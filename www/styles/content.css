@@ -20,7 +20,7 @@
 }
 
 #description code {
-  padding: 2px 7px;
+  padding: 1px 7px;
 
   border-radius: 10px;
 
@@ -76,6 +76,7 @@
 
 #inputTextarea {
   height: 248px;
+  width: 200px;
 
   padding: 7px;
 
@@ -101,7 +102,9 @@
   cursor: pointer;
 
   color: rgb(247, 245, 232);
-  background-color: rgb(176, 139, 32);;
+  background-color: rgb(176, 139, 32);
+
+  user-select: none;
 }
 
 #evaluateButton span {

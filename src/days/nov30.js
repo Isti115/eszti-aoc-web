@@ -1,34 +1,54 @@
 export default {
-  title: 'Nov. 30.\n - Elágazás',
+  title: 'Nov. 30.\n - Ciklusok',
   description:
 `
-# Feltételes utasítások
-A mai feladatban a JavaScript elágazásának használatával fogunk megismerkedni.
-Szerepe, hogy bizonyos utasítások végrehajtását feltételekhez kössük.
+# Ismétlések
 
-Szintaxis és működés szempontjából is nagyon hasonló más nyelvekhez.
-Az \`if\` kulcsszót követő kerek zárójelekben adhatjuk meg azt a kifejezést, amely alapján a program futás közben dönteni fog.
-Ezután egy kapcsos zárójelekkel határolt utasítássorozat írandó, mely akkor lesz érvényes, ha a fent említett kifejezés igazra értékelődik ki.
-Opcionálisan megadható még egy \`else\` ág is, szintén
+Az ciklusok célja bizonyos utasítások egymás után történő többszöri végrehajtása.
 
-Például:
+## Általános ismétlés:
+Alapesetben ez egy bizonyos feltétel teljesülésének mentén történik:
 \`\`\`
-if () {
-
-} else {
+while (condition) {
 
 }
 \`\`\`
 
-A Mikulás meghallotta, hogy valakinek, úgyhogy küldött egy példát
+## Speciális ismétlések:
+Előfordulnak olyan ismétlések is, amik gyakran felhasznált célokra úgymond "szakosodtak", és ezáltal a nekik megfelelő problémához szebb megoldást nyújtanak.
+
+### Számszoros:
+Egy sűrűn felmerülő elvárás például az, hogy végig lehessen iterálni egy adott számsorozaton.
+Ilyenkor az első utasítás a kezdeti állapot beállítása, a második az ismétlés folytatásának feltétele és a harmadik pedig a ciklus magjának végrehajtásai között elvégzendő utasítások.
+\`\`\`
+for (let i = 0; i < 15; i++) {
+  console.log(i)
+}
+\`\`\`
+
+### Objektum kulcsain:
+Szintén nem ritka, hogy egy objektum kulcsain szeretnénk végigiterálni.
+<br />
+Ekkor az \`in\` kulcsszó előtt álló változó az \`in\` után lévő objektum kulcsait fogja sorra felvenni.
+\`\`\`
+for (const property in object) {
+  console.log(object[property])
+}
+\`\`\`
+
+### Lista elemein:
+Számos alkalommal megesik továbbá az is, hogy egy lista elemeit szeretnénk felsorolni és mindegyikre végrehajtani bizonyos műveleteket.
+<br />
+Ekkor az \`of\` kulcsszó előtt álló változó az \`of\` után lévő lista elemeit fogja sorra felvenni.
+\`\`\`
+for (const element of list) {
+  console.log(element)
+}
+\`\`\`
 `,
   initialInput:
 `
-{
-  "children": [
-    {"name": "Móriczka", "": 0.124}
-  ]
-}
+{}
 `,
   initialCode:
 `

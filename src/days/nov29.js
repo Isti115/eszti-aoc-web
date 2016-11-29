@@ -1,56 +1,86 @@
 export default {
-  title: 'Nov. 29.\n - Ciklusok',
+  title: 'Nov. 29.\n - Objektumok',
   description:
 `
-# Ismétlések
+# Objektumok
 
-Az ciklusok célja bizonyos utasítások egymás után történő többszöri végrehajtása.
+Mint azt már a kettővel ez előtti feladatban is láthattuk, az objektumok JavaScript-ben kulcs-érték párokat takarnak, azonban akkor csak a létrehozásukat próbáltuk ki.
+<br />
+Most azt fogjuk megnézni, hogy miután létrejött egy objektum, hogyan lehet azt használni.
 
-## Általános ismétlés:
-Alapesetben ez egy bizonyos feltétel teljesülésének mentén történik:
+## Létrehozás
+Kapcsoszárójelek között vesszővel elválasztva felsorolt nulla vagy több kulcs-érték párral jelölhetünk a ködban egy objektumok, ahol a kulcs kötelező jelleggel szöveg típusű, viszont az érték tetszőleges adat lehet.
+Például:
 \`\`\`
-while (condition) {
-
-}
+const object1 = {} // Üres objektum
+const setCard1 = {"color": "blue", count: 2, "shape": "diamond", "fill": "striped"}
 \`\`\`
+## Adattag felvitele és elérése
+<br />
+Miután létrehoztunk egy objektumot a következőket tehetjük vele:
+* Hozzáadhatunk új kulcsot: _pl.:_ \`setCard1.isSelected = false\`
+* Megváltoztathatunk egy már meglévő adatot: _pl.:_ \`setCard1.isSelected = true\`
+<br />
+(_A létrehozás és a megváltoztatás lényegében ugyanaz, hiszen létrehozáskor tulajdonképpen a határozatlan (*undefined*) típusról változtatjuk meg valamire._)
 
-## Speciális ismétlések:
-Előfordulnak olyan ismétlések is, amik gyakran felhasznált célokra úgymond "szakosodtak", és ezáltal a nekik megfelelő problémához szebb megoldást nyújtanak.
+* Lekérdezhetünk egy kulcshoz tartozó értéket: _pl.:_ \`const currentCardColor = setCard1.color\`
 
-### Számszoros:
-Egy sűrűn felmerülő elvárás például az, hogy végig lehessen iterálni egy adott számsorozaton.
-Ilyenkor az első utasítás a kezdeti állapot beállítása, a második az ismétlés folytatásának feltétele és a harmadik pedig a ciklus magjának végrehajtásai között elvégzendő utasítások.
-\`\`\`
-for (let i = 0; i < 15; i++) {
-  console.log(i)
-}
-\`\`\`
+## Előre ismeretlen nevű kulcsok
 
-### Objektum kulcsain:
-Szintén nem ritka, hogy 
-\`\`\`
-for (const property in object) {
-  console.log(object[property])
-}
-\`\`\`
+A rugalmasság érdekében van lehetőségünk olyan kulcsok mögött tárolt adatokat is létrehoznunk, módosítanunk valamint elérnünk, amelyeknek a program írásakor még nem feltétlenül ismerjük a nevét.
+Ekkor azonban nem alkalmazhatjuk azt a szintaxist, melyben egy pont választotta el a kulcsot az objektum nevétől.
+Helyette a listák elemeihez hasonló módon, szögletes zárójelek közötti értékkel mondhatni _indexelhetjük_ az objektumokat.
 
-### Lista elemein:
-
+Például:
 \`\`\`
-for (const element of list) {
-  console.log(element)
-}
+const object2 = {}
+const property = "tulajdonság"
+const value = "érték"
+
+object2[property] = value
 \`\`\`
 
+> Megjegyzés: Tehát a következő két írásmód teljesen ekvivalens: \`objektum.adattag\` és \`objektum['adattag']\`.
+
+A feladatban az otthoni leltárunkban kell egy tárgy bejegyzését frissíteni. :)
+<br />
+A bemeneti adatok között \`data.original\` néven megkapjuk a tárgy eredeti bejegyzését, a \`data.modification\` objektum pedig tartalmazza a végrehajtandó módosítást.
+A \`modification\` a következőképpen épül fel: Egy \`property\` nevű mezőben van megadva, hogy a tárgy melyik tulajdonságát szeretnénk módosítani, a \`newValue\` kulcs mögött pedig az új érték található.
+A megadott tulajdonságának lecserélésén felül még növeljük meg egyszer a tárgynak a \`moveCount\` adattagját, ami azt számolja, hogy hányszor raktuk már arrébb. ;)
 `,
-  initialInput: `{}`,
+  initialInput:
+`
+{
+  "original": {
+    "name": "valami",
+    "place": "polc",
+    "moveCount": 3
+  },
+
+  "modification": {
+    "property": "place",
+    "newValue": "szekrény"
+  }
+}
+`,
   initialCode:
 `
+const newObject = data.original
+const modification = data.modification
 
+// newObject módosításai
+
+return newObject
 `,
   validSolution:
 `
+const newObject = data.original
+const modification = data.modification
 
+newObject[modification.property] = modification.newValue
+newObject.moveCount++
+
+return newObject
 `,
   code: 2480
 }
