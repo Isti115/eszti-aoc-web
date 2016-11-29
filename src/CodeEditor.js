@@ -9,12 +9,14 @@ export default class codeEditor extends CustomElement {
     super('div')
     this.container.id = 'codeEditor'
 
+    // Input
+
     this.input = document.createElement('div')
 
     this.inputHeader = document.createElement('h2')
 
     this.inputReset = document.createElement('span')
-    this.inputReset.id = 'inputReset'
+    this.inputReset.classList.add('resetArrow')
     this.inputReset.textContent = '↻'
 
     this.inputHeader.appendChild(this.inputReset)
@@ -29,12 +31,30 @@ export default class codeEditor extends CustomElement {
 
     this.container.appendChild(this.input)
 
-    this.codeMirror = CodeMirror(this.container, {
+    // Code
+
+    this.code = document.createElement('div')
+
+    this.codeHeader = document.createElement('h2')
+
+    this.codeReset = document.createElement('span')
+    this.codeReset.classList.add('resetArrow')
+    this.codeReset.textContent = '↻'
+
+    this.codeHeader.appendChild(this.codeReset)
+    this.codeHeader.appendChild(document.createTextNode(' Code:'))
+    this.codeHeader.addEventListener('click', this.resetCode.bind(this))
+
+    this.code.appendChild(this.codeHeader)
+
+    this.codeMirror = CodeMirror(this.code, {
       mode: 'javascript',
       theme: 'esztiaoc',
       tabSize: 2
     })
     setTimeout(() => this.codeMirror.refresh())
+
+    this.container.appendChild(this.code)
 
     this.evaluateButton = document.createElement('button')
     this.evaluateButton.id = 'evaluateButton'
@@ -54,7 +74,14 @@ export default class codeEditor extends CustomElement {
   }
 
   updateDay (dayString, dayData) {
-    this.codeMirror.setValue(dayData.initialCode.trim())
+    const savedCode = window.localStorage.getItem(`day_${dayString}_code`)
+
+    if (savedCode === null) {
+      this.codeMirror.setValue(dayData.initialCode.trim())
+    } else {
+      this.codeMirror.setValue(savedCode)
+    }
+
     this.inputTextarea.value = dayData.initialInput.trim()
   }
 
@@ -62,7 +89,12 @@ export default class codeEditor extends CustomElement {
     this.inputTextarea.value = dayStringStore.getDayData().initialInput.trim()
   }
 
+  resetCode () {
+    this.codeMirror.setValue(dayStringStore.getDayData().initialCode.trim())
+  }
+
   evaluate () {
+    window.localStorage.setItem(`day_${dayStringStore.getDayString()}_code`, this.codeMirror.getValue())
     this.output.reset()
 
     try {
