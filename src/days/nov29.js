@@ -9,7 +9,7 @@ Mint azt már a kettővel ez előtti feladatban is láthattuk, az objektumok Jav
 Most azt fogjuk megnézni, hogy miután létrejött egy objektum, hogyan lehet azt használni.
 
 ## Létrehozás
-Kapcsoszárójelek között vesszővel elválasztva felsorolt nulla vagy több kulcs-érték párral jelölhetünk a ködban egy objektumok, ahol a kulcs kötelező jelleggel szöveg típusű, viszont az érték tetszőleges adat lehet.
+Kapcsoszárójelek között vesszővel elválasztva felsorolt nulla vagy több kulcs-érték párral jelölhetünk a kódban egy objektumok, ahol a kulcs kötelező jelleggel szöveg típusű, viszont az érték tetszőleges adat lehet.
 Például:
 \`\`\`
 const object1 = {} // Üres objektum

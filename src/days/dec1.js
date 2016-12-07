@@ -16,7 +16,7 @@ Például:
 if (x % 2 == 0) {
   console.log('Páros')
 } else if (x % 3 == 0) {
-  console.log('Hárommal ösztható')
+  console.log('Hárommal osztható')
 } else {
   console.log('Sem kettővel, sem hárommal nem osztható')
 }

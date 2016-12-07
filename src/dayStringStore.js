@@ -23,14 +23,17 @@ class DayStringStore {
     return days[this.dayString]
   }
 
-  setDayString (dayString) {
+  setDayString (dayString, force) {
     let strict = false
 
-    if (window.location.host.search(/.*waik.*/) != -1) {
+    if (window.location.host.search(/.*waik.*/) !== -1) {
       strict = true
     }
 
-    if (!(dayString in days) || (strict && DayUtility.todayDayNumber() < DayUtility.dayNumberFromString(dayString, true))) {
+    if (!force && (
+      !(dayString in days) ||
+      (strict && DayUtility.todayDayNumber() < DayUtility.dayNumberFromString(dayString, true))
+      )) {
       window.alert('This day is not available yet.')
       return
     }

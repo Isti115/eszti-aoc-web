@@ -103,7 +103,11 @@ export default class codeEditor extends CustomElement {
       const dayData = dayStringStore.getDayData()
       const expectedOutput = new Function('data', dayData.validSolution)(JSON.parse(dayData.initialInput))
 
-      this.output.setResult(result, _.isEqual(result, expectedOutput), dayData.code)
+      if (expectedOutput === undefined) {
+        throw new Error('Problem not yet implemented.')
+      }
+
+      { this.output.setResult(result, _.isEqual(result, expectedOutput), dayData.code) }
     } catch (ex) {
       this.output.error(ex)
     }

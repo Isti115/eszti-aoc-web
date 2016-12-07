@@ -50,6 +50,10 @@
   border: solid rgb(127, 6, 9) 2px;
 }
 
+#description a {
+  color: white;
+}
+
 #codeEditor {
   height: 300px;
 }

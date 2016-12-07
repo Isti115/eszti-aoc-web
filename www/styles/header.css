@@ -90,7 +90,13 @@
   width: 277px;
   height: 270px;
 
-  margin-top: -34px;
+  position: absolute;
+  top: -5px;
+  right: 10px;
+
+  z-index: -1;
+
+  /*margin-top: -34px;*/
   margin-left: auto;
 
   background: url(../images/spheres.png);

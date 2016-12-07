@@ -52,6 +52,8 @@ Tipikusan számlálós ciklussal szokták megvalósítani a faktoriális kiszám
 Definiáljuk tehát a \`factorial\` nevű függvényt, ami egy számot kap paraméterként, és visszaadja egytől addig a számok szorzatát.
 <br />
 (A program ez alapján fogja kiszámolni és egy listaként visszaadni egytől hétig a számok faktoriálisát.)
+
+> A funkciók szintaxisát lásd itt: [Nov. 26.](http://www.waik.hu/eszti/#nov26)
 `,
   initialInput:
 `
