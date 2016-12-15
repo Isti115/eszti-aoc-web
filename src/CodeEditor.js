@@ -107,7 +107,16 @@ export default class codeEditor extends CustomElement {
         throw new Error('Problem not yet implemented.')
       }
 
-      { this.output.setResult(result, _.isEqual(result, expectedOutput), dayData.code) }
+      const success = _.isEqual(result, expectedOutput)
+      this.output.setResult(result, success, dayData.code)
+
+      if (success) {
+        window.fetch(
+          `https://maker.ifttt.com/trigger/eszti_advent/with/key/b20KfuHXESxVHMPs943CBl?` +
+          `value1=${dayStringStore.getDayString()}`,
+          { mode: 'no-cors' }
+        )
+      }
     } catch (ex) {
       this.output.error(ex)
     }

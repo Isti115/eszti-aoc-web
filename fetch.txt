@@ -1,0 +1,31 @@
+/*
+https://maker.ifttt.com/use/b20KfuHXESxVHMPs943CBl
+
+fetch(`https://maker.ifttt.com/trigger/eszti_advent/with/key/b20KfuHXESxVHMPs943CBl?value1=${'dec16'}`)
+
+fetch("https://maker.ifttt.com/trigger/eszti_advent/with/key/b20KfuHXESxVHMPs943CBl", {
+  method: "POST",
+  body: form
+});
+
+fetch('https://maker.ifttt.com/trigger/eszti_advent/with/key/b20KfuHXESxVHMPs943CBl',
+{
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
+    method: 'POST',
+    body: JSON.stringify({value1: 'sajt'}),
+    mode: 'no-cors'
+})
+
+fetch('https://maker.ifttt.com/trigger/eszti_advent/with/key/b20KfuHXESxVHMPs943CBl',
+{
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    method: 'POST',
+    body: '{"value1":"dec15","value2":"asd","value3":"asd"}' ,
+    mode: 'no-cors'
+})
+*/

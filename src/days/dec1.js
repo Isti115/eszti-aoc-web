@@ -28,7 +28,7 @@ Meghallotta, hogy valaki pont programozni tanul, úgyhogy gyorsan küldött is e
 Egy olyan programra lenne szüksége, ami az év során összegyűjtött jósági adatok alapján kategorizálja a gyereket.
 
 A bemenő adat egy lista (\`data.children\`), ami gyerekek objektumait tartalmazza. Minden gyerekhez tartozik egy **szöveg** típusú név (\`name\`) és egy 0 és 1 közötti **szám** típusú pontszám (\`score\`).
-A kimenő adatnak egy objektumnak kéne lennie, amelynek három gyerek lista típusú adattagja van:
+A kimenő adatnak egy objektumnak kéne lennie, amelynek négy gyerek lista típusú adattagja van:
 
 * (\`decent\`): A 0.25 alatti pontszámú, megfelelő jóságú gyerekek kerüljenek bele.
 * (\`good\`): A 0.5 alatti pontszámú, jó gyerekek kerüljenek bele.
