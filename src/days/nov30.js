@@ -53,7 +53,7 @@ Definiáljuk tehát a \`factorial\` nevű függvényt, ami egy számot kap param
 <br />
 (A program ez alapján fogja kiszámolni és egy listaként visszaadni egytől hétig a számok faktoriálisát.)
 
-> A funkciók szintaxisát lásd itt: [Nov. 26.](http://www.waik.hu/eszti/#nov26)
+> A funkciók szintaxisát lásd itt: [Nov. 26.](#nov26)
 `,
   initialInput:
 `

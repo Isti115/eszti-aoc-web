@@ -13,7 +13,7 @@ Ezen függvények akkor jöhetnek jól, amikor röviden és tömören szeretnén
 
 (_Mivel JavaScript-ben a függvények is kezelhetőek értékként, ezért attól függetlenül, hogy egy függvénynek nincs neve, azt értékül adhatjuk egy változónak._)
 <br />
-Például az [első nap](http://www.waik.hu/eszti/#nov26)ról ismerős \`areaOfRectangle\` függvény:
+Például az [első nap](#nov26)ról ismerős \`areaOfRectangle\` függvény:
 \`\`\`
 function areaOfRectangle (width, height) {
   const area = width * height

@@ -9,6 +9,8 @@ class DayStringStore {
 
   init () {
     this.setDayString(window.location.hash ? window.location.hash.slice(1) : 'nov26')
+
+    window.addEventListener('hashchange', (e) => this.init())
   }
 
   subscribe (callback) {

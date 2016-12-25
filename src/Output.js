@@ -40,15 +40,19 @@ export default class Output extends CustomElement {
     this.outputContent.textContent = ''
   }
 
+  makeOutputString (string) {
+    return (JSON.stringify(string, null, '  ') || 'undefined').replace(/\\n/g, '\n') + '\n'
+  }
+
   log (message) {
-    this.outputContent.textContent += JSON.stringify(message, null, '  ') + '\n'
+    this.outputContent.textContent += this.makeOutputString(message)
 
     this.outputContent.scrollTop = this.outputContent.scrollHeight
   }
 
   setResult (result, success, code) {
-    this.resultContent.textContent = JSON.stringify(result, null, '  ')
-    this.resultContent.textContent += '\n#==---==#\n'
+    this.resultContent.textContent = this.makeOutputString(result)
+    this.resultContent.textContent += '#==---==#\n'
     this.resultContent.textContent += success ? 'Correct result!\nYour code is: ' + code : 'Wrong result.'
 
     this.resultContent.scrollTop = this.resultContent.scrollHeight

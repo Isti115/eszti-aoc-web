@@ -25,12 +25,12 @@ console.log(sum) // 15
 
 A feladat ismét az ajándékraktár management szekciójától érkezett. Mivel a Karácsony nagyobb ünnep, ezért megnyitották a raktárépületet egy újabb dimenzióban, így már nem csak jobbra és balra vannak polcok, hanem beljebb is lehet vinni valamit az épületben és kijjebb is lehet hozni. Ahhoz, hogy itt is képesek legyenek megtalálni egy ajándék jelenlegi pozícióját új programra van szükségük.
 
-Ennek a bemenete egy kiindulási pozícióból (\`initialPosition\`) és egy listából (\`movingLog\`) fog állni.
+Ennek a bemenete egy kiindulási pozícióból (\`initialPosition\`) és egy listából (\`movements\`) fog állni.
 A kezdeti pozíció egy \`x\` és \`y\` koordinátát tartalmazó objektum, a lista bejegyzései pedig egy \`direction\` és egy \`amount\` nevű adattaggal rendelkeznek.
 
 Az irány a következőek közül valamelyik:
-* **left**: \`x\` irányú pozitív elmozdulás
-* **right**: \`x\` irányú negatív elmozdulás
+* **left**: \`x\` irányú negatív elmozdulás
+* **right**: \`x\` irányú pozitív elmozdulás
 * **in**: \`y\` irányú pozitív elmozdulás
 * **out**: \`y\` irányú negatív elmozdulás
 
