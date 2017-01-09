@@ -1,8 +1,8 @@
 export default {
-  title: 'Dec. 17.\n - NULL',
+  title: 'Dec. 17.\n - Levelek 2.',
   description:
 `
-
+## Reguláris kifejezések
 `,
   initialInput: `{}`,
   initialCode:

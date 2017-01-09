@@ -110,7 +110,7 @@ export default class codeEditor extends CustomElement {
       const success = _.isEqual(result, expectedOutput)
       this.output.setResult(result, success, dayData.code)
 
-      if (success) {
+      if (success && window.location.host.search(/.*waik.*/) !== -1) {
         window.fetch(
           `https://maker.ifttt.com/trigger/eszti_advent/with/key/b20KfuHXESxVHMPs943CBl?` +
           `value1=${dayStringStore.getDayString()}`,
