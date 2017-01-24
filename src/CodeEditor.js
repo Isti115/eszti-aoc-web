@@ -4,7 +4,7 @@ import CustomElement from './CustomElement'
 import Output from './Output'
 import dayStringStore from './dayStringStore'
 
-export default class codeEditor extends CustomElement {
+export default class CodeEditor extends CustomElement {
   constructor () {
     super('div')
     this.container.id = 'codeEditor'

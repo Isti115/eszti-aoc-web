@@ -4,7 +4,18 @@ export default {
 `
 
 `,
-  initialInput: `{}`,
+  initialInput:
+`
+{
+  "": [
+
+
+  ],
+
+  "": [
+  ]
+}
+`,
   initialCode:
 `
 
