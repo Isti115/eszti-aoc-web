@@ -4,7 +4,7 @@ export default {
 `
 A Mikulás megbízta a manókat, hogy amint megvan a teszt eredménye juttassák el hozzá, azonban ő nem ismeri a JSON-t, úgyhogy szépen prezentálható állapotba kéne hozni az adatokat.
 
-Ehhez először alakítsuk az előző nap eredményét (onann átmásolva ennek a napnak a bemeneti mezőjébe és \`data\` néven hozzáférve a programban) egy olyan listává, ami \`type\` és \`problem\` kulcsokat tartalmazó objektumokból áll.
+Ehhez először alakítsuk az előző nap eredményét (onnan átmásolva ennek a napnak a bemeneti mezőjébe és \`data\` néven hozzáférve a programban) egy olyan listává, ami \`type\` és \`problem\` kulcsokat tartalmazó objektumokból áll.
 Az előző nap mintakimenete például így nézne ki az átalakítás után:
 \`\`\`
 [

@@ -3,9 +3,9 @@ export default {
   description:
 `
 ## Névválasztás
-A karácsonykor kapott plüssállatok mindig választhatnak maguknak egy nevet. Persze a megajándékozott bármikor elnevezheti őket máshogyan, de ha ez elmarad, akkor az lesz a nevük, amit maguknak választottak.
+A karácsonykor kapott plüssállatok mindig választhatnak maguknak egy nevet. Természetesen a megajándékozott bármikor elnevezheti őket máshogyan, de ha ez elmarad, akkor az lesz a nevük, amit maguknak választottak.
 
-A Mikulásnak van egy listája, amiről mindegyik állatka választhat. (Szerepelhet olyan név is a listán, amit senki sem választ.) A plüssállatok nagyon műveltek irodalmilag, ezért olyan nevet szeretnek választani, ami alliterál vagy rímel az ő megnevezésükkel.
+A Mikulásnak van egy listája, amiről mindegyik állatka választhat. (Szerepelhet olyan név is a listán, amit senki sem választ.) A plüssállatok nagyon műveltek irodalmilag, ezért olyan nevet szeretnek választani, ami alliterál vagy rímel az ő saját fajuk megnevezésével.
 <br />
 (Jelen esetben jelentse ez azt, hogy vagy megyegyezik az első karakterük, vagy pedig azonos az utolsó két betűjük.)
 
@@ -39,35 +39,30 @@ Például:
 `
 {
   "animals": [
-    "Sün",
-    "Róka",
     "Csiga",
-    "Béka",
-
-    "Egér",
     "Kanári",
-
-    "Mackó",
+    "Béka",
+    "Róka",
+    "Sün",
     "Paci",
-    "Zebra"
+    "Zebra",
+    "Mackó",
+    "Egér"
   ],
 
   "names": [
-    "Simon",
-    "Rudi",
-    "Csabi",
-    "Béla",
-
     "Elemér",
-    "Klári",
-
+    "Béla",
     "Ferkó",
-    "Laci",
-    "Nóra",
-
-    "Tamás",
+    "Rudi",
     "Izabella",
-    "József"
+    "Csabi",
+    "Tamás",
+    "József",
+    "Klári",
+    "Laci",
+    "Simon",
+    "Nóra"
   ]
 }
 `,
@@ -77,12 +72,12 @@ Például:
 `,
   validSolution:
 `
-const result = []
+const result = {}
 
 for (const animal of data.animals) {
   for (const name of data.names) {
     if (animal[0] === name[0] || animal.slice(-2) === name.slice(-2)) {
-      result.push([animal, name])
+      result[animal] = name
     }
   }
 }
