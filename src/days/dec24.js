@@ -37,7 +37,7 @@ Ez pedig Designer Manó terve egy hat egység magas fához:
 
 A program bemenetként egy listát fog kapni, ami tartalmazza a manók fái között előforduló magasságokat. Visszatérési értékként az ezek alapján a számok alapján generált tervek listáját szeretnénk kapni.
 
-(_Megjegyzés: Figyeljünk arra, hogy a kimenet sortöréssel (\`\\n\`) kezdődjön és azzal is érjen véget._)
+(_Megjegyzés: Figyeljünk arra, hogy a kimenet egy sortöréssel (\`\\n\`) kezdődjön és azzal is érjen véget._)
 
 > Szöveg típusú változókat sima \`+\` operátorral tudunk összefűzni. Ha egy már meglévő változóhoz szeretnénk hozzátoldani, akkor az \`x = x + y\` séma rövidítésére használhatjuk a kényelmesebb \`x += y\` operátort.
 >
@@ -83,7 +83,7 @@ function makeTree (x) {
     result += ' '.repeat(x - i - 1) + '/'
     const offset = 3 * (i % 2)
 
-    for (let j = offset; j < offset + i * 2; j++) {
+    for (let j = offset - 1; j < offset + i * 2 - 1; j++) {
       if (j % 6 == 0) {
         result += '%'
       } else if (j % 3 == 0) {
